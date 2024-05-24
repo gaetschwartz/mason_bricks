@@ -1,0 +1,22 @@
+name: gaetans_feature_brick
+description: "A brick to create a feature using best practices and your state management of choice!"
+version: 0.1.0
+environment:
+  mason: any
+repository: "https://github.com/gaetschwartz/mason_bricks/tree/master/bricks/feature_brick"
+vars:
+  feature_name:
+    type: string
+    description: The feature name
+    prompt: "What is the feature name?"
+  state_management:
+    type: enum
+    description: The features state management
+    default: riverpod
+    prompt: "What is the features state management?"
+    values:
+      - bloc
+      - cubit
+      - provider
+      - riverpod
+      - none
